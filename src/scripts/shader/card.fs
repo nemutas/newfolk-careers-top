@@ -37,7 +37,6 @@ void main() {
   float spower = smoothstep(transition * (1.0 + range) - range, transition * (1.0 + range), distance(auv, vec2(0.5) * screenAspect));
 
   uv.x += uTime * 0.2;
-  // vec4 current = texture(uCurrent, uv);
   vec4 current = texture(uCurrent, uv - sdir * spower);
   vec4 next = texture(uNext, uv - dir * power);
 
